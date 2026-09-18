@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Wahid Bin Kouser — CSE Student at IIUC, Aspiring Programmer & Problem Solver from Chattogram, Bangladesh."/>
+  <title>Wahid Bin Kouser — CSE Student & Programmer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">Wahid<span class="dot">.</span>dev</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#cp" class="nav-link">CP</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">● Available for learning & collaboration</span>
+        <h1 class="hero-title">Hi, I'm <span class="gradient-text">Wahid Bin Kouser</span></h1>
+        <p class="hero-subtitle">
+          Computer Science &amp; Engineering Student <span class="sep">|</span>
+          Aspiring Programmer <span class="sep">|</span>
+          Problem Solver
+        </p>
+        <p class="hero-desc"></p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            View My Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Chattogram, BD</span></div>
+          <div class="meta-item"><span class="meta-label">University</span><span class="meta-value">IIUC</span></div>
+          <div class="meta-item"><span class="meta-label">Department</span><span class="meta-value">CSE</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <img src="profile.jpeg" alt="Wahid Bin Kouser" class="profile-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="profile-placeholder" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Add profile.jpg</span>
+          </div>
+          <div class="frame-ring"></div>
+          <div class="frame-ring frame-ring-2"></div>
+        </div>
+        <div class="floating-tag tag-1">&lt;C /&gt;</div>
+        <div class="floating-tag tag-2">&lt;Web/&gt;</div>
+        <div class="floating-tag tag-3">AI/ML</div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">A curious mind, building step by step.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal"></div>
+        <aside class="about-side reveal">
+          <div class="info-card">
+            <h4>Quick Facts</h4>
+            <ul></ul>
+          </div>
+          <div class="info-card highlight">
+            <h4>Currently</h4>
+            <p>Building fundamentals in C/C++, practicing problem solving, and learning web development.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Tools I'm <span class="gradient-text">growing into.</span></h2>
+        <p class="section-desc">A practical starting toolkit — organized by category.</p>
+      </div>
+      <div class="skills-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">03 / Education</span>
+        <h2 class="section-title">The foundation <span class="gradient-text">so far.</span></h2>
+      </div>
+      <div class="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">04 / Projects</span>
+        <h2 class="section-title">Small builds. <span class="gradient-text">Big lessons.</span></h2>
+        <p class="section-desc">Projects will appear here as I build them.</p>
+      </div>
+      <div class="projects-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="cp">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">05 / Competitive Programming</span>
+        <h2 class="section-title">Competitive Programming &amp; <span class="gradient-text">Problem Solving.</span></h2>
+      </div>
+      <div class="cp-grid">
+        <div class="cp-text reveal">
+          <p>I'm practicing programming problems regularly and developing my logical and algorithmic thinking. Competitive programming is helping me build the discipline to approach unfamiliar problems step by step.</p>
+          <p>I primarily practice on the following platforms:</p>
+          <div class="platform-list">
+            <div class="platform-card">
+              <div class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <div><h4>Codeforces</h4><p>Practicing contests & problem sets</p></div>
+            </div>
+            <div class="platform-card">
+              <div class="platform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+              <div><h4>beecrowd</h4><p>Building problem-solving fundamentals</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cp-side reveal">
+          <div class="placeholder-card">
+            <span class="placeholder-label">Problem Solving Progress</span>
+            <h4>Coming Soon</h4>
+            <p>I'll track my solved problems, contest participation, and learning milestones here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">06 / Contact</span>
+        <h2 class="section-title">Let's make <span class="gradient-text">something curious.</span></h2>
+        <p class="section-desc">Have a question, an idea, or a good resource to share? My inbox is open.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Get in touch</h3>
+          <p>I'm always open to learning opportunities, collaboration ideas, and good conversations.</p>
+          <div class="contact-links">
+            <a href="#" class="contact-link">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+              <span class="contact-info"><small>Email</small><strong></strong></span>
+            </a>
+            <a href="#" class="contact-link">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+              <span class="contact-info"><small>GitHub</small><strong></strong></span>
+            </a>
+            <a href="#" class="contact-link">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+              <span class="contact-info"><small>LinkedIn</small><strong></strong></span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row"><label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label></div>
+          <div class="form-row"><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label></div>
+          <div class="form-row"><label><span>Message</span><textarea name="message" rows="5" placeholder="What would you like to share?" required></textarea></label></div>
+          <button type="submit" class="btn btn-primary full">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span>Wahid Bin Kouser</span>
+      </div>
+      <p class="footer-text">Built with HTML, CSS &amp; JavaScript · © <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- JS (ক্রম গুরুত্বপূর্ণ) -->
+  <script type="module" src="js/three-bg.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
