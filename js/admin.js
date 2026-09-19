@@ -79,11 +79,7 @@ import {
   async function loadAndRender() {
     data = await PortfolioData.load();
     renderAll();
-
-    unsubscribe = PortfolioData.subscribe((updated) => {
-      data = updated;
-      renderAll();
-    });
+    // subscribe বন্ধ — typing-এ কার্সর লাফাবে না
   }
 
   function persist(silent = true) {
@@ -143,7 +139,7 @@ import {
       const el = document.getElementById(id);
       if (!el) return;
       el.value = data.hero[key] || '';
-      el.oninput = () => { data.hero[key] = el.value; persist(); };
+      el.onchange = () => { data.hero[key] = el.value; persist(); };
     });
   }
 
@@ -167,7 +163,7 @@ import {
     `).join('');
 
     pWrap.querySelectorAll('textarea[data-para]').forEach(ta => {
-      ta.oninput = () => { data.about.paragraphs[+ta.dataset.para] = ta.value; persist(); };
+      ta.onchange = () => { data.about.paragraphs[+ta.dataset.para] = ta.value; persist(); };
     });
     pWrap.querySelectorAll('[data-del-para]').forEach(btn => {
       btn.onclick = () => {
@@ -193,10 +189,10 @@ import {
     `).join('');
 
     fWrap.querySelectorAll('[data-fact-label]').forEach(inp => {
-      inp.oninput = () => { data.about.facts[+inp.dataset.factLabel].label = inp.value; persist(); };
+      inp.onchange = () => { data.about.facts[+inp.dataset.factLabel].label = inp.value; persist(); };
     });
     fWrap.querySelectorAll('[data-fact-value]').forEach(inp => {
-      inp.oninput = () => { data.about.facts[+inp.dataset.factValue].value = inp.value; persist(); };
+      inp.onchange = () => { data.about.facts[+inp.dataset.factValue].value = inp.value; persist(); };
     });
     fWrap.querySelectorAll('[data-del-fact]').forEach(btn => {
       btn.onclick = () => {
@@ -205,7 +201,7 @@ import {
       };
     });
 
-    document.getElementById('aboutHeading').oninput = (e) => {
+    document.getElementById('aboutHeading').onchange = (e) => {
       data.about.heading = e.target.value; persist();
     };
     document.getElementById('addAboutPara').onclick = () => {
@@ -235,10 +231,13 @@ import {
     `).join('');
 
     wrap.querySelectorAll('[data-skill-title]').forEach(inp => {
-      inp.oninput = () => { data.skills[+inp.dataset.skillTitle].title = inp.value; persist(); };
+      inp.onchange = () => { 
+        data.skills[+inp.dataset.skillTitle].title = inp.value; 
+        persist(); 
+      };
     });
     wrap.querySelectorAll('[data-skill-tags]').forEach(inp => {
-      inp.oninput = () => {
+      inp.onchange = () => {
         data.skills[+inp.dataset.skillTags].tags = inp.value.split(',').map(t => t.trim()).filter(Boolean);
         persist();
       };
@@ -280,7 +279,7 @@ import {
 
     const bind = (sel, key, tf) => {
       wrap.querySelectorAll(sel).forEach(inp => {
-        inp.oninput = () => {
+        inp.onchange = () => {
           const idx = +inp.getAttribute(sel.match(/\[(.*?)\]/)[1]);
           data.education[idx][key] = tf ? tf(inp.value) : inp.value;
           persist();
@@ -337,7 +336,7 @@ import {
 
     const bind = (sel, key, tf) => {
       wrap.querySelectorAll(sel).forEach(inp => {
-        inp.oninput = () => {
+        inp.onchange = () => {
           const idx = +inp.getAttribute(sel.match(/\[(.*?)\]/)[1]);
           data.projects[idx][key] = tf ? tf(inp.value) : inp.value;
           persist();
@@ -378,7 +377,7 @@ import {
       const el = document.getElementById(id);
       if (!el) return;
       el.value = data.contact[key] || '';
-      el.oninput = () => { data.contact[key] = el.value; persist(); };
+      el.onchange = () => { data.contact[key] = el.value; persist(); };
     });
   }
 
