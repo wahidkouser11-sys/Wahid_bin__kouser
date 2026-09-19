@@ -3,6 +3,7 @@
    ========================================================= */
 
 import { auth } from './firebase.js';
+import './data.js';
 import {
   signInWithEmailAndPassword,
   signOut,
