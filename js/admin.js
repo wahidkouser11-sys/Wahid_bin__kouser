@@ -27,7 +27,6 @@ import {
   const pageTitle  = document.getElementById('pageTitle');
 
   let data = null;
-  let unsubscribe = null;
 
   // =========================================================
   // AUTH
@@ -41,7 +40,6 @@ import {
   function showLogin() {
     loginWrap.style.display = 'grid';
     adminShell.hidden = true;
-    if (unsubscribe) unsubscribe();
   }
 
   loginForm?.addEventListener('submit', async (e) => {
